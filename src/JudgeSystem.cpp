@@ -109,7 +109,11 @@ int JudgeSystem::mainPage() {
     case 2:
         query_version();
         break;
+    case 7: 
+        return -1;
+        break;
     default:
         break;
     }
+    return 0;
 }
