@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include<vector>
 class Problem {
     protected:
         std::string problem_title; // 題目名稱

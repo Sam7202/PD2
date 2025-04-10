@@ -2,6 +2,7 @@
 #include <fstream>
 #include <sstream>
 #include "Problem.h"
+#include <vector>
 #define red(text)    "\033[31m" text "\033[0m"
 #define green(text)  "\033[32m" text "\033[0m"
 #define yellow(text) "\033[33m" text "\033[0m"
