@@ -10,7 +10,7 @@ class AccountSystem : private User {
         std::string USER_DATA_PATH; // 使用者資料儲存位置
         void sign_up(); // Function: 註冊
         void userdataUpdate(); // Function: 更新 USER_DATA_PATH 內的資料
-    public:
+    protected:
         void init(std::string USER_DATA_PATH); // Function: 初始化 (讀取資料)
         User* search(std::string name); // Function: 查詢 name 是否存在
         std::pair<bool, std::string> login(); // Function: 登入
