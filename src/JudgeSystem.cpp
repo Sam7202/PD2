@@ -83,6 +83,7 @@ void JudgeSystem::query_version(){
     std::cout<<green("VERSION: ")<<JudgeSystem::getVersion()<<"\n";
 }
 int JudgeSystem::mainPage() {
+    //load data
     if( JudgeSystem::status == "NOT READY" ) {
         // call function loadData
         this->loadData();
@@ -90,13 +91,14 @@ int JudgeSystem::mainPage() {
         status = "USER LOGIN";
         return 0;
     }
+    //user log in
     else if( JudgeSystem::status == "USER LOGIN" ) {
         std::pair<bool, std::string>  user_info = AccountSystem::login();
         if( user_info.first == false ) return 0;
         JudgeSystem::status = "READY";
         return 0;
     }
-    
+    //login success, enter system
     MainPage::mainpagePrint();
     int opt = operationCheck();
     

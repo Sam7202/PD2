@@ -91,6 +91,7 @@ std::pair<bool, std::string> AccountSystem::login()
     std::pair<bool, std::string> result = std::make_pair(false, "");
     std::string user_name, user_password;
     bool login_success = false;
+    
     while (!login_success)
     {
         std::cout << yellow("User name (Enter -1 to sign up): ");
